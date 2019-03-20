@@ -6,20 +6,23 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public Image oneHealth;
+    public Image twoHealth;
 
-    public Text playerOneHealth;
-    public Text playerTwoHealth;
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        playerOneHealth.text = "Health: 5";
-        playerTwoHealth.text = "Health: 5";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            oneHealth.fillAmount -= 0.1f;
+        }
     }
 }
