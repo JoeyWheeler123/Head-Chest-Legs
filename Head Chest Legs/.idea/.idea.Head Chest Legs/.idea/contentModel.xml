@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\rhino\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rhino\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Head Chest Legs.-923881911.00" t="ExcludeRecursive" />
-    <e p="C:\Users\rhino\Documents\Repositeries\Head-Chest-Legs\Head Chest Legs" t="IncludeRecursive">
+    <e p="C:\Users\rhino\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Head Chest Legs.-1522320905.00" t="ExcludeRecursive" />
+    <e p="G:\Repositories\Head-Chest-Legs\Head Chest Legs" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="CharacterSelection.cs" t="Include" />
           <e p="InputTurn.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
         </e>

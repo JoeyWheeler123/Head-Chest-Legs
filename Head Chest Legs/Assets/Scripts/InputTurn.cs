@@ -6,21 +6,28 @@ public class InputTurn : MonoBehaviour
 {
     int playerOneTurn = 0;
     int playerTwoTurn = 0;
+    
     List<string> playerOneMoves;
     List<string> playerTwoMoves;
+    
     private bool axisOnePressed = false;
     private bool axisTwoPressed = false;
     private bool rightTriggerPressed = false;
     private bool leftTriggerPressed = false;
+    
     public int actionLimit = 3;
+    
+    private Animator player1;
+    private Animator player2;
 
     // Start is called before the first frame update
     void Start()
     {
         playerOneMoves = new List<string>();
         playerTwoMoves = new List<string>();
-        
-        
+
+        player1 = GameObject.FindWithTag("Player 1").GetComponent<Animator>();
+        player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -139,6 +146,9 @@ public class InputTurn : MonoBehaviour
             bool headBlockTwo  = false;
             bool chestBlockTwo = false;
             bool legBlockTwo = false;
+
+            player1.SetBool("Idle", false);
+            player2.SetBool("Idle", false);
             
             print("Round Play");
             for (int i = 0; i < playerOneMoves.Count; i++)
@@ -171,6 +181,7 @@ public class InputTurn : MonoBehaviour
 
                 if (playerOneMoves[i] == "Head Attack")
                 {
+                    player1.SetTrigger("Head");
                     if (!headBlockTwo)
                     {
                         print("Player 2 Head Hit");
@@ -183,6 +194,7 @@ public class InputTurn : MonoBehaviour
                 }
                 else if (playerOneMoves[i] == "Chest Attack")
                 {
+                    player1.SetTrigger("Chest");
                     if (!chestBlockTwo)
                     {
                         print("Player 2 Chest Hit");
@@ -195,6 +207,7 @@ public class InputTurn : MonoBehaviour
                 }
                 else if (playerOneMoves[i] == "Leg Attack")
                 {
+                    player1.SetTrigger("Legs");
                     if (!legBlockTwo)
                     {
                         print("Player 2 Leg Hit");
@@ -208,6 +221,7 @@ public class InputTurn : MonoBehaviour
 
                 if (playerTwoMoves[i] == "Head Attack")
                 {
+                    player2.SetTrigger("Head");
                     if (!headBlock)
                     {
                         print("Player 1 Head Hit");
@@ -219,6 +233,7 @@ public class InputTurn : MonoBehaviour
                     }
                 } else if (playerTwoMoves[i] == "Chest Attack")
                 {
+                    player2.SetTrigger("Chest");
                     if (!chestBlock)
                     {
                         print("Player 1 Chest Hit");
@@ -230,6 +245,7 @@ public class InputTurn : MonoBehaviour
                     }
                 } else if (playerTwoMoves[i] == "Leg Attack")
                 {
+                    player2.SetTrigger("Legs");
                     if (!legBlock)
                     {
                         print("Player 1 Leg Hit");
@@ -254,6 +270,9 @@ public class InputTurn : MonoBehaviour
                     playerTwoMoves.Clear();
                     leftTriggerPressed = false;
                     rightTriggerPressed = false;
+
+                    player1.SetBool("Idle", true);
+                    player2.SetBool("Idle", true);
                 }
             }
         }
