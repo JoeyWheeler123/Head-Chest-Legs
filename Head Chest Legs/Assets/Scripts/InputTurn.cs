@@ -12,18 +12,21 @@ public class InputTurn : MonoBehaviour
     private bool axisTwoPressed = false;
     private bool rightTriggerPressed = false;
     private bool leftTriggerPressed = false;
+    public int actionLimit = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         playerOneMoves = new List<string>();
         playerTwoMoves = new List<string>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerOneTurn < 3)
+        if (playerOneTurn < actionLimit)
         {
             if (Input.GetButtonUp("Head Attack"))
             {
@@ -75,7 +78,8 @@ public class InputTurn : MonoBehaviour
         //{
         //    print("AXIS NEGATIVE");
         //}
-        if (playerTwoTurn < 3)
+        
+        if (playerTwoTurn < actionLimit)
         {
             if (Input.GetButtonUp("Head Attack 2"))
             {
@@ -127,7 +131,7 @@ public class InputTurn : MonoBehaviour
             }
         }
 
-        if(playerOneTurn == 3 && playerTwoTurn == 3)
+        if(playerOneTurn == actionLimit && playerTwoTurn == actionLimit)
         {
             bool headBlock = false;
             bool chestBlock = false;
@@ -170,6 +174,7 @@ public class InputTurn : MonoBehaviour
                     if (!headBlockTwo)
                     {
                         print("Player 2 Head Hit");
+                        PlayerHealth.twoHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -181,6 +186,7 @@ public class InputTurn : MonoBehaviour
                     if (!chestBlockTwo)
                     {
                         print("Player 2 Chest Hit");
+                        PlayerHealth.twoHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -192,6 +198,7 @@ public class InputTurn : MonoBehaviour
                     if (!legBlockTwo)
                     {
                         print("Player 2 Leg Hit");
+                        PlayerHealth.twoHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -204,6 +211,7 @@ public class InputTurn : MonoBehaviour
                     if (!headBlock)
                     {
                         print("Player 1 Head Hit");
+                        PlayerHealth.oneHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -214,6 +222,7 @@ public class InputTurn : MonoBehaviour
                     if (!chestBlock)
                     {
                         print("Player 1 Chest Hit");
+                        PlayerHealth.oneHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -224,6 +233,7 @@ public class InputTurn : MonoBehaviour
                     if (!legBlock)
                     {
                         print("Player 1 Leg Hit");
+                        PlayerHealth.oneHealthValue -= 0.1f;
                     }
                     else
                     {
@@ -233,6 +243,8 @@ public class InputTurn : MonoBehaviour
 
             if(i == 2)
                 {
+                    actionLimit += 1;
+                    
                     playerOneTurn = 0;
                     playerOneMoves.Clear();
                     axisOnePressed = false;
@@ -244,69 +256,6 @@ public class InputTurn : MonoBehaviour
                     rightTriggerPressed = false;
                 }
             }
-
-            /*for(int i = 0; i < playerTwoMoves.Count; i ++)
-            {
-                if (playerTwoMoves[i] == "Head Attack")
-                {
-                    if (!headBlock)
-                    {
-                        print("Player 1 Head hit");
-                    }
-                    else
-                    {
-                        print("Player 1 Head Blocked");
-                    }
-                    /*print("2 High Attack");#1#
-                }
-                else if (playerTwoMoves[i] == "Head Block")
-                {
-                    headBlockTwo = true;
-                    print("2 High Block");
-                }
-                else if (playerTwoMoves[i] == "Chest Attack")
-                {
-                    if (!chestBlock)
-                    {
-                        print("Player 1 Chest Hit");
-                    }
-                    else
-                    {
-                        print("Player 1 Chest Blocked");
-                    }
-                    /*print("2 Mid Attack");#1#
-                }
-                else if (playerTwoMoves[i] == "Chest Block")
-                {
-                    chestBlockTwo = true;
-                    print("2 Mid Block");
-                }
-                else if (playerTwoMoves[i] == "Leg Attack")
-                {
-                    if (!legBlock)
-                    {
-                        print("Player 1 Leg Hit");
-                    }
-                    else
-                    {
-                        print("Player 1 Leg Blocked");
-                    }
-                    /*print("2 Low Attack");#1#
-                }
-                else if (playerTwoMoves[i] == "Leg Block")
-                {
-                    legBlockTwo = true;
-                    print("2 Low Block");
-                }
-
-                if (i == 2)
-                {
-                    playerTwoTurn = 0;
-                    playerTwoMoves.Clear();
-                    leftTriggerPressed = false;
-                    rightTriggerPressed = false;
-                }
-            }*/
         }
     }
 }
