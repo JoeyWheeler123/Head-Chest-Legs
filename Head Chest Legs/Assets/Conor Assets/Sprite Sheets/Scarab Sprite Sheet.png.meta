@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: fad477adf10e2a34d8fcd1ca6afe694e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Scarab Sprite Sheet_0
+    21300002: Scarab Sprite Sheet_1
+    21300004: Scarab Sprite Sheet_2
+    21300006: Scarab Sprite Sheet_3
+    21300008: Scarab Sprite Sheet_4
+    21300010: Scarab Sprite Sheet_5
+    21300012: Scarab Sprite Sheet_6
+    21300014: Scarab Sprite Sheet_7
+    21300016: Scarab Sprite Sheet_8
+    21300018: Scarab Sprite Sheet_9
+    21300020: Scarab Sprite Sheet_10
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 532
+        width: 344
+        height: 290
+      alignment: 9
+      pivot: {x: 0.49074733, y: 0.1158422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217fde7dd5c6e694f98977b6d6cb1760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 728
+        width: 210
+        height: 245
+      alignment: 9
+      pivot: {x: 0.19685523, y: 0.24016163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d592d395ffc58f44a9d6d2510479da31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 613
+        width: 160
+        height: 365
+      alignment: 9
+      pivot: {x: 0.6989395, y: 0.26454377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d5028b94a35264da5d6a5e5161a9e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 616
+        width: 213
+        height: 320
+      alignment: 9
+      pivot: {x: 0.16376564, y: 0.2214857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b6d16605586c44ca10955a6836852c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 238
+        width: 286
+        height: 257
+      alignment: 9
+      pivot: {x: 0.5834711, y: 0.69816524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40d34d3954814842aab955a01979a98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 176
+        width: 201
+        height: 269
+      alignment: 9
+      pivot: {x: 0.3099693, y: 0.7544053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5086e16a62766459111f08e141b139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 148
+        width: 190
+        height: 301
+      alignment: 9
+      pivot: {x: 0.50837725, y: 0.8383948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b222ff6a2eb94d7499d6bc872109e1f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 117
+        width: 238
+        height: 348
+      alignment: 9
+      pivot: {x: 0.6872369, y: 0.8247051}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15af4925e4604ea4f8dbedd9b1b83d9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 201
+        width: 186
+        height: 286
+      alignment: 9
+      pivot: {x: 0.5684522, y: 0.8450134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db7cfeabe5ed1f4b825c01020c9a822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 605
+        width: 172
+        height: 315
+      alignment: 9
+      pivot: {x: 0.39821723, y: 0.73746413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e62eb946e75184daf336fefbd732e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarab Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 608
+        width: 234
+        height: 268
+      alignment: 9
+      pivot: {x: 0.19394012, y: 0.16744563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d046c69130b64d42bf23e80c145946c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2b6a8f605c13bab43a9543a02fe4de64
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

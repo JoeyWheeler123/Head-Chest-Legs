@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 'Scarab Fighter '
+    uniqueID: 712557689
+    locked: 0
