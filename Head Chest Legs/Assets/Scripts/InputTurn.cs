@@ -12,8 +12,6 @@ public class InputTurn : MonoBehaviour
     
     private bool axisOnePressed = false;
     private bool axisTwoPressed = false;
-    private bool rightTriggerPressed = false;
-    private bool leftTriggerPressed = false;
     
     public int actionLimit = 3;
     
@@ -59,20 +57,20 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Chest Block");
             }
-            else if (Input.GetAxis("Leg Attack") > 0.1f && !axisTwoPressed)
+            else if (Input.GetAxis("Legs") > 0.1f && !axisOnePressed)
             {
-                axisTwoPressed = true;
+                axisOnePressed = true;
                 print("Leg Attack");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Attack");
-            }
-        else if (Input.GetAxis("Leg Attack") < -0.1f && !axisOnePressed)
+            } else if (Input.GetAxis("Legs") < -0.1f && !axisOnePressed)
             {
                 axisOnePressed = true;
                 print("Leg Block");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Block");
-            }else if (Input.GetAxis("Leg Attack") < 0.1f && Input.GetAxis("Leg Attack") > -0.1f)
+            }
+            else if (Input.GetAxis("Legs") < 0.1f && Input.GetAxis("Legs") > -0.1f)
             {
                 axisOnePressed = false;
             }
@@ -99,30 +97,22 @@ public class InputTurn : MonoBehaviour
                 print("Head Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Block");
-            }
-           
-            if (Input.GetAxis("Chest Attack 2") > 0.1f && !rightTriggerPressed)
+            } else if (Input.GetAxis("Chest Attacks 2") > 0.1f && !axisTwoPressed)
             {
-                rightTriggerPressed = true;
+                axisTwoPressed = true;
                 print("Chest Attack 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Attack");
-            }
-            else if(Input.GetAxis("Chest Attack 2") < 0.1f)
+            } else if (Input.GetAxis("Chest Attacks 2") < -0.1f && !axisTwoPressed)
             {
-                rightTriggerPressed = false;
-            }
-            
-            if (Input.GetAxis("Chest Block 2") > 0.1f && !leftTriggerPressed)
-            {
-                leftTriggerPressed = true;
+                axisTwoPressed = true;
                 print("Chest Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Block");
-            } else if (Input.GetAxis("Chest Block 2") < 0.1f)
+            } else if(Input.GetAxis("Chests 2") < 0.1f && Input.GetAxis("Chests 2") > -0.1f)
             {
-                leftTriggerPressed = false;
-            } 
+                axisTwoPressed = false;
+            }
             
             if (Input.GetButtonUp("Leg Attack 2"))
             {
@@ -268,8 +258,6 @@ public class InputTurn : MonoBehaviour
 
                     playerTwoTurn = 0;
                     playerTwoMoves.Clear();
-                    leftTriggerPressed = false;
-                    rightTriggerPressed = false;
 
                     player1.SetBool("Idle", true);
                     player2.SetBool("Idle", true);
