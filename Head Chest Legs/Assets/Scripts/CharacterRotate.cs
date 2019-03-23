@@ -7,7 +7,7 @@ public class CharacterRotate : MonoBehaviour
 {
     private GameObject[] characters;
 
-    private int index;
+    public int index;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,9 @@ public class CharacterRotate : MonoBehaviour
             go.SetActive(false);
         }
 
-        if(characters[0])
+        if(characters[index])
         {
-            characters[0].SetActive(false);
+            characters[index].SetActive(true);
         }
     }
 
@@ -68,8 +68,8 @@ public class CharacterRotate : MonoBehaviour
 
     public void Confirm()
     {
-        characters[index].tag = "Player 1";
         PlayerPrefs.SetInt("CharacterSelected", index);
-        SceneManager.LoadScene("Main");
+        //characters[index].tag = "Player 1";
+        SceneManager.LoadScene("Connor Test Scene");
     }
 }
