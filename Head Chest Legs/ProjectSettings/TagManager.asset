@@ -46,3 +46,6 @@ TagManager:
   - name: 'Scarab Fighter '
     uniqueID: 712557689
     locked: 0
+  - name: Skivvy
+    uniqueID: 2769688783
+    locked: 0
