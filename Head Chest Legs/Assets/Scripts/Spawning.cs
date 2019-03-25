@@ -9,6 +9,9 @@ public class Spawning : MonoBehaviour
     public GameObject char3;
     public GameObject char4;
 
+    GameObject p1;
+    GameObject p2;
+
     public Transform player1;
     public Transform player2;
 
@@ -30,36 +33,44 @@ public class Spawning : MonoBehaviour
 
         if(savedPlayer1 == 0)
         {
-            Instantiate(char1, player1);
+            p1 = Instantiate(char1, player1);
+            p1.tag = "Player 1";
         }
         else if (savedPlayer1 == 1)
         {
-            Instantiate(char2, player1);
+            p1 = Instantiate(char2, player1);
+            p1.tag = "Player 1";
         }
         else if (savedPlayer1 == 2)
         {
-            Instantiate(char3, player1);
+            p1 = Instantiate(char3, player1);
+            p1.tag = "Player 1";
         }
         else if (savedPlayer1 == 3)
         {
-            Instantiate(char4, player1);
+            p1 = Instantiate(char4, player1);
+            p1.tag = "Player 1";
         }
 
         if (savedPlayer2 == 0)
         {
-            Instantiate(char1, player2);
+            p2 = Instantiate(char1, player2);
+            p2.tag = "Player 2";
         }
         else if (savedPlayer2 == 1)
         {
-            Instantiate(char2, player2);
+            p2 = Instantiate(char2, player2);
+            p2.tag = "Player 2";
         }
         else if (savedPlayer2 == 2)
         {
-            Instantiate(char3, player2);
+            p2 = Instantiate(char3, player2);
+            p2.tag = "Player 2";
         }
         else if (savedPlayer2 == 3)
         {
-            Instantiate(char4, player2);
+            p2 = Instantiate(char4, player2);
+            p2.tag = "Player 2";
         }
     }
 }

@@ -33,4 +33,9 @@ public class LoadScene : MonoBehaviour
         PlayerPrefs.SetInt("CharacterSelected2", p2);
         SceneManager.LoadScene("Connor Test Scene");
     }
+
+    public void Clear()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
