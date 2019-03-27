@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterSelectP2 : MonoBehaviour
+public class CharacterRotate2 : MonoBehaviour
 {
     private GameObject[] characters;
 
@@ -84,5 +84,6 @@ public class CharacterSelectP2 : MonoBehaviour
         PlayerPrefs.SetInt("CharacterSelected2", index);
         //characters[index].tag = "Player 1";
         SceneManager.LoadScene("Connor Test Scene");
+        //print(PlayerPrefs.GetInt("CharacterSelected2"));
     }
 }

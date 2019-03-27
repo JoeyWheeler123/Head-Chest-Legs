@@ -15,23 +15,22 @@ public class Spawning : MonoBehaviour
     public Transform player1;
     public Transform player2;
 
-    int savedPlayer1;
-    int savedPlayer2;
+    //public int savedPlayer1;
+    //public int savedPlayer2;
 
     //int character;
 
     // Start is called before the first frame update
     void Start()
     {
+        print(PlayerPrefs.GetInt("CharacterSelected1"));
+        print(PlayerPrefs.GetInt("CharacterSelected2"));
+        int savedPlayer1 = PlayerPrefs.GetInt("CharacterSelected1");
+        int savedPlayer2 = PlayerPrefs.GetInt("CharacterSelected2");
+        Debug.Log(savedPlayer1);
+        Debug.Log(savedPlayer2);
 
-    }
-
-    private void Awake()
-    {
-        savedPlayer1 = PlayerPrefs.GetInt("SelectedPlayer1");
-        savedPlayer2 = PlayerPrefs.GetInt("SelectedPlayer2");
-
-        if(savedPlayer1 == 0)
+        if (savedPlayer1 == 0)
         {
             p1 = Instantiate(char1, player1);
             p1.tag = "Player 1";
@@ -72,5 +71,10 @@ public class Spawning : MonoBehaviour
             p2 = Instantiate(char4, player2);
             p2.tag = "Player 2";
         }
+    }
+
+    private void Awake()
+    {
+        
     }
 }
