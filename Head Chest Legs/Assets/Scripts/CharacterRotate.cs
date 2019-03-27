@@ -12,7 +12,7 @@ public class CharacterRotate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        index = PlayerPrefs.GetInt("CharacterSelected");
+        index = PlayerPrefs.GetInt("CharacterSelected1");
 
         characters = new GameObject[transform.childCount];
 
@@ -35,7 +35,20 @@ public class CharacterRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonUp("Head Attack"))
+        {
+            Left();
+        }
+
+        if (Input.GetButtonUp("Head Block"))
+        {
+            Right();
+        }
+
+        if (Input.GetButtonUp("Submit"))
+        {
+            Confirm();
+        }
     }
 
     public void Right()
@@ -68,7 +81,7 @@ public class CharacterRotate : MonoBehaviour
 
     public void Confirm()
     {
-        PlayerPrefs.SetInt("CharacterSelected", index);
+        PlayerPrefs.SetInt("CharacterSelected1", index);
         //characters[index].tag = "Player 1";
         SceneManager.LoadScene("Connor Test Scene");
     }
