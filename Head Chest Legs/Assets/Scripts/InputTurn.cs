@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputTurn : MonoBehaviour
 {
     int playerOneTurn = 0;
     int playerTwoTurn = 0;
-    
+
     List<string> playerOneMoves;
     List<string> playerTwoMoves;
-    
+
     private bool axisOnePressed = false;
     private bool axisTwoPressed = false;
-    
+
     public int actionLimit = 3;
-    
+
     private Animator player1;
     private Animator player2;
+
+    public int timer = 3;
+    public Text timeText;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +32,7 @@ public class InputTurn : MonoBehaviour
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void InputChecks()
     {
         if (playerOneTurn < actionLimit)
         {
@@ -62,7 +65,8 @@ public class InputTurn : MonoBehaviour
                 print("Leg Attack");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Attack");
-            } else if (Input.GetButtonUp("Leg Block"))
+            }
+            else if (Input.GetButtonUp("Leg Block"))
             {
                 print("Leg Block");
                 playerOneTurn += 1;
@@ -77,7 +81,7 @@ public class InputTurn : MonoBehaviour
         //{
         //    print("AXIS NEGATIVE");
         //}
-        
+
         if (playerTwoTurn < actionLimit)
         {
             if (Input.GetButtonUp("Head Attack 2"))
@@ -91,23 +95,26 @@ public class InputTurn : MonoBehaviour
                 print("Head Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Block");
-            } else if (Input.GetAxis("Chests 2") > 0.1f && !axisOnePressed)
+            }
+            else if (Input.GetAxis("Chests 2") > 0.1f && !axisOnePressed)
             {
                 axisOnePressed = true;
                 print("Chest Attack 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Attack");
-            } else if (Input.GetAxis("Chests 2") < -0.1f && !axisOnePressed)
+            }
+            else if (Input.GetAxis("Chests 2") < -0.1f && !axisOnePressed)
             {
                 axisOnePressed = true;
                 print("Chest Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Block");
-            } else if(Input.GetAxis("Chests 2") < 0.1f && Input.GetAxis("Chests 2") > -0.1f)
+            }
+            else if (Input.GetAxis("Chests 2") < 0.1f && Input.GetAxis("Chests 2") > -0.1f)
             {
                 axisOnePressed = false;
             }
-            
+
             if (Input.GetAxis("Legs 2") > 0.1f && !axisTwoPressed)
             {
                 axisTwoPressed = true;
@@ -122,27 +129,49 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Leg Block");
             }
-            else if(Input.GetAxis("Legs 2") < 0.1f && Input.GetAxis("Legs 2") > -0.1f)
+            else if (Input.GetAxis("Legs 2") < 0.1f && Input.GetAxis("Legs 2") > -0.1f)
             {
                 axisTwoPressed = false;
             }
         }
+    }
 
-        if(playerOneTurn == actionLimit && playerTwoTurn == actionLimit)
+    void AttackChecks()
+    {
+        if (timer == 0 || playerOneTurn == actionLimit && playerTwoTurn == actionLimit)
         {
             bool headBlock = false;
             bool chestBlock = false;
             bool legBlock = false;
-            bool headBlockTwo  = false;
+            bool headBlockTwo = false;
             bool chestBlockTwo = false;
             bool legBlockTwo = false;
 
+            bool blockChecked = false;
+            bool blockTwoChecked = false;
+            bool attackChecked = false;
+            bool attackTwoChecked = false;
+
             player1.SetBool("Idle", false);
             player2.SetBool("Idle", false);
+
+            if (playerOneMoves.Count == 0)
+            {
+                blockChecked = true;
+                attackChecked = true;
+            }
+
+            if (playerTwoMoves.Count == 0)
+            {
+                blockTwoChecked = true;
+                attackTwoChecked = true;
+            }
             
             print("Round Play");
             for (int i = 0; i < playerOneMoves.Count; i++)
             {
+                print("Running");
+                print(playerOneMoves.Count);
                 if (playerOneMoves[i] == "Head Block")
                 {
                     headBlock = true;
@@ -156,6 +185,15 @@ public class InputTurn : MonoBehaviour
                     legBlock = true;
                 }
 
+                if (i == playerOneMoves.Count - 1)
+                {
+                    print("Check 1");
+                    blockChecked = true;
+                }
+            }
+
+            for (int i = 0; i < playerTwoMoves.Count; i++)
+            {
                 if (playerTwoMoves[i] == "Head Block")
                 {
                     headBlockTwo = true;
@@ -169,6 +207,15 @@ public class InputTurn : MonoBehaviour
                     legBlockTwo = true;
                 }
 
+                if (i == playerTwoMoves.Count - 1)
+                {
+                    print("Check 2");
+                    blockTwoChecked = true;
+                }
+            }
+
+            for (int i = 0; i < playerOneMoves.Count; i++)
+            {
                 if (playerOneMoves[i] == "Head Attack")
                 {
                     player1.SetTrigger("Head");
@@ -209,6 +256,15 @@ public class InputTurn : MonoBehaviour
                     }
                 }
 
+                if (i == playerOneMoves.Count - 1)
+                {
+                    print("Check 3");
+                    attackChecked = true;
+                }
+            }
+
+            for (int i = 0; i < playerTwoMoves.Count; i++)
+            {
                 if (playerTwoMoves[i] == "Head Attack")
                 {
                     player2.SetTrigger("Head");
@@ -221,7 +277,8 @@ public class InputTurn : MonoBehaviour
                     {
                         print("Player 1 Head Blocked");
                     }
-                } else if (playerTwoMoves[i] == "Chest Attack")
+                }
+                else if (playerTwoMoves[i] == "Chest Attack")
                 {
                     player2.SetTrigger("Chest");
                     if (!chestBlock)
@@ -233,7 +290,8 @@ public class InputTurn : MonoBehaviour
                     {
                         print("Player 1 Chest Blocked");
                     }
-                } else if (playerTwoMoves[i] == "Leg Attack")
+                }
+                else if (playerTwoMoves[i] == "Leg Attack")
                 {
                     player2.SetTrigger("Legs");
                     if (!legBlock)
@@ -247,22 +305,44 @@ public class InputTurn : MonoBehaviour
                     }
                 }
 
-            if(i == 2)
+                if (i == playerTwoMoves.Count - 1)
                 {
-                    actionLimit += 1;
-                    
-                    playerOneTurn = 0;
-                    playerOneMoves.Clear();
-                    axisOnePressed = false;
-                    axisTwoPressed = false;
-
-                    playerTwoTurn = 0;
-                    playerTwoMoves.Clear();
-
-                    player1.SetBool("Idle", true);
-                    player2.SetBool("Idle", true);
+                    print("Check 4");
+                    attackTwoChecked = true;
                 }
             }
+
+            if (blockChecked && blockTwoChecked && attackChecked && attackTwoChecked)
+            {
+                print("All checked");
+                actionLimit += 1;
+                timer = 3;
+
+                playerOneTurn = 0;
+                playerOneMoves.Clear();
+                axisOnePressed = false;
+                axisTwoPressed = false;
+
+                playerTwoTurn = 0;
+                playerTwoMoves.Clear();
+
+                player1.SetBool("Idle", true);
+                player2.SetBool("Idle", true);
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        InputChecks();
+        AttackChecks();
+
+        timeText.text = timer.ToString();
+
+        if (timer <= 0)
+        {
+            timer = 0;
         }
     }
 }

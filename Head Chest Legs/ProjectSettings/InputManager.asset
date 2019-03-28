@@ -108,7 +108,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 5
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: n
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -124,7 +124,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 7
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: m
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -169,7 +169,7 @@ InputManager:
     m_Name: Chests 2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: h
     positiveButton: g
     altNegativeButton: 
     altPositiveButton: 
@@ -185,7 +185,7 @@ InputManager:
     m_Name: Legs 2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: b
     positiveButton: v
     altNegativeButton: 
     altPositiveButton: 
