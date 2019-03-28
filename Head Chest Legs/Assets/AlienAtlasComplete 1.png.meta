@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: 31979e9d409fd664684e657825336e81
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: R_UpperArm
+    21300004: R_Fist
+    21300006: R_Elbow
+    21300008: L_Fist
+    21300010: L_UpperArm
+    21300012: L_Elbow
+    21300014: Chest
+    21300016: Neck
+    21300018: R_Shorts
+    21300020: L_Shorts
+    21300022: L_Shoe
+    21300024: Pelvis
+    21300026: L_Shin
+    21300028: R_Shoe
+    21300030: R_Shin
+    21300032: Abs
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1567
+        width: 384
+        height: 454
+      alignment: 9
+      pivot: {x: 0.15264036, y: 0.3441888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b6c04c39d88384a9be7d68fc772b5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_UpperArm
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1658
+        width: 528
+        height: 371
+      alignment: 9
+      pivot: {x: 0.8383403, y: 0.6662397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74d629f4d2f30d4a8273d8c6d12c7ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Fist
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1544
+        width: 817
+        height: 500
+      alignment: 9
+      pivot: {x: 0.24489965, y: 0.66163015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e3803e8d81d284fb222a3e000e987c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Elbow
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1240
+        width: 408
+        height: 277
+      alignment: 9
+      pivot: {x: 0.5886129, y: 0.7380076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7ae66d70958e041a3ad6af6be67d63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Fist
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1183
+        width: 684
+        height: 393
+      alignment: 9
+      pivot: {x: 0.1144568, y: 0.80304253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6c1737e9f1cff4cade1b4534dd192b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_UpperArm
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 1195
+        width: 435
+        height: 325
+      alignment: 9
+      pivot: {x: 0.2702185, y: 0.78138036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8882febb8f7f28144a03bd8c98108f79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Elbow
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 920
+        width: 374
+        height: 376
+      alignment: 9
+      pivot: {x: 0.3855604, y: 0.7561201}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fb7e35e49df6a4387dadf098c690e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 632
+        width: 834
+        height: 576
+      alignment: 9
+      pivot: {x: 0.5042767, y: 0.3761564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d563c579c57e5942a21e5e1633870c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neck
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 750
+        width: 377
+        height: 355
+      alignment: 9
+      pivot: {x: 0.31078503, y: 0.46985912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e15fe00542f8b44a177db7b1b7f0db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Shorts
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 724
+        width: 324
+        height: 343
+      alignment: 9
+      pivot: {x: 0.35689178, y: 0.80155885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd962ca81e41a704a99a55527428cd4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Shorts
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 456
+        width: 398
+        height: 312
+      alignment: 9
+      pivot: {x: 0.34765348, y: 0.6371812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8494079bc724954caf613394ce8864f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Shoe
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 424
+        width: 473
+        height: 208
+      alignment: 9
+      pivot: {x: 0.28886327, y: 0.68862414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5314d610047a144986f4c2a8845601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pelvis
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 408
+        width: 666
+        height: 272
+      alignment: 9
+      pivot: {x: 0.55355424, y: 0.4606617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f94106be3078734a964e4032ec261ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L_Shin
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 20
+        width: 304
+        height: 313
+      alignment: 9
+      pivot: {x: 0.5351976, y: 0.716509}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f938feae1db5b4eba17e4d02a1b99b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Shoe
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 12
+        width: 378
+        height: 312
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f092b1b9739e4a847bffbd82682cdfd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R_Shin
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 296
+        height: 372
+      alignment: 9
+      pivot: {x: 0.644596, y: 0.91228044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcff0e9e3fd4abd43af07548663bf342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abs
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 12
+        width: 676
+        height: 311
+      alignment: 9
+      pivot: {x: 0.6055238, y: 0.45412618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e4196d6b6d3149b5fb57c9b34a61a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6e861b56bf6186648954827460ce8d5f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
