@@ -83,6 +83,6 @@ public class CharacterRotate : MonoBehaviour
     {
         PlayerPrefs.SetInt("CharacterSelected1", index);
         //characters[index].tag = "Player 1";
-        SceneManager.LoadScene("Connor Test Scene");
+        SceneManager.LoadScene("Main");
     }
 }

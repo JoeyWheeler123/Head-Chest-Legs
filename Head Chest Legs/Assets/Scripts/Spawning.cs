@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour
 {
-    public GameObject char1;
-    public GameObject char2;
-    public GameObject char3;
-    public GameObject char4;
+    public GameObject skarab;
+    public GameObject skivvy;
+    public GameObject alien;
+    public GameObject skarab2;
+    public GameObject skivvy2;
+    public GameObject alien2;
+
+    public GameObject skarabHP;
+    public GameObject skivvyHP;
+    public GameObject alienHP;
+    public GameObject skarab2HP;
+    public GameObject skivvy2HP;
+    public GameObject alien2HP;
 
     GameObject p1;
     GameObject p2;
@@ -32,44 +41,46 @@ public class Spawning : MonoBehaviour
 
         if (savedPlayer1 == 0)
         {
-            p1 = Instantiate(char1, player1);
+            p1 = Instantiate(skarab, player1);
             p1.tag = "Player 1";
+            p1.SetActive(true);
+            skarabHP.SetActive(true);
         }
         else if (savedPlayer1 == 1)
         {
-            p1 = Instantiate(char2, player1);
+            p1 = Instantiate(skivvy, player1);
             p1.tag = "Player 1";
+            p1.SetActive(true);
+            skivvyHP.SetActive(true);
         }
         else if (savedPlayer1 == 2)
         {
-            p1 = Instantiate(char3, player1);
+            p1 = Instantiate(alien, player1);
             p1.tag = "Player 1";
-        }
-        else if (savedPlayer1 == 3)
-        {
-            p1 = Instantiate(char4, player1);
-            p1.tag = "Player 1";
+            p1.SetActive(true);
+            alienHP.SetActive(true);
         }
 
         if (savedPlayer2 == 0)
         {
-            p2 = Instantiate(char1, player2);
+            p2 = Instantiate(skarab2, player2);
             p2.tag = "Player 2";
+            p2.SetActive(true);
+            skarab2HP.SetActive(true);
         }
         else if (savedPlayer2 == 1)
         {
-            p2 = Instantiate(char2, player2);
+            p2 = Instantiate(skivvy2, player2);
             p2.tag = "Player 2";
+            p2.SetActive(true);
+            skivvy2HP.SetActive(true);
         }
         else if (savedPlayer2 == 2)
         {
-            p2 = Instantiate(char3, player2);
+            p2 = Instantiate(alien2, player2);
             p2.tag = "Player 2";
-        }
-        else if (savedPlayer2 == 3)
-        {
-            p2 = Instantiate(char4, player2);
-            p2.tag = "Player 2";
+            p2.SetActive(true);
+            alien2HP.SetActive(true);
         }
     }
 
