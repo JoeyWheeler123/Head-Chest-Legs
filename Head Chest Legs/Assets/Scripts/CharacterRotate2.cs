@@ -45,10 +45,10 @@ public class CharacterRotate2 : MonoBehaviour
             Right();
         }
 
-        if (Input.GetButtonUp("Submit"))
+        /*if (Input.GetButtonUp("Chest Attack 2"))
         {
             Confirm();
-        }
+        }*/
     }
 
     public void Right()

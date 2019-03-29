@@ -45,7 +45,7 @@ public class CharacterRotate : MonoBehaviour
             Right();
         }
 
-        if (Input.GetButtonUp("Submit"))
+        if (Input.GetButtonUp("Chest Attack"))
         {
             Confirm();
         }

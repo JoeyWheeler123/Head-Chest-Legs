@@ -336,7 +336,17 @@ public class InputTurn : MonoBehaviour
     {
         player1 = GameObject.FindWithTag("Player 1").GetComponent<Animator>();
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
-        
+
+        if(player1 == null)
+        {
+            player1 = GameObject.FindWithTag("Player 1").GetComponentInChildren<Animator>();
+        }
+
+        if(player2 == null)
+        {
+            player2 = GameObject.FindWithTag("Player 2").GetComponentInChildren<Animator>();
+        }
+
         InputChecks();
         AttackChecks();
         if (roundCount <= 3)
