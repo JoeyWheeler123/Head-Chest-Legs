@@ -16,10 +16,13 @@ public class InputTurn : MonoBehaviour
 
     public int actionLimit = 3;
 
-    private Animator player1;
-    private Animator player2;
+    public Animator player1;
+    public Animator player2;
 
-    public int timer = 3;
+    public int roundCount = 1;
+    public Text roundText;
+
+    public int timer = 5;
     public Text timeText;
 
     // Start is called before the first frame update
@@ -28,8 +31,7 @@ public class InputTurn : MonoBehaviour
         playerOneMoves = new List<string>();
         playerTwoMoves = new List<string>();
 
-        player1 = GameObject.FindWithTag("Player 1").GetComponent<Animator>();
-        player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
+        StartCoroutine(Timer());
     }
 
     void InputChecks()
@@ -73,14 +75,6 @@ public class InputTurn : MonoBehaviour
                 playerOneMoves.Add("Leg Block");
             }
         }
-
-        // if(Input.GetAxis("Horizontal") >= 0.1f)
-        //{
-        //    print("AXIS POSITIVE");
-        //} else if(Input.GetAxis("Horizontal") <= -0.1f)
-        //{
-        //    print("AXIS NEGATIVE");
-        //}
 
         if (playerTwoTurn < actionLimit)
         {
@@ -138,7 +132,7 @@ public class InputTurn : MonoBehaviour
 
     void AttackChecks()
     {
-        if (timer == 0 || playerOneTurn == actionLimit && playerTwoTurn == actionLimit)
+        if (timer == -1 || playerOneTurn == actionLimit && playerTwoTurn == actionLimit)
         {
             bool headBlock = false;
             bool chestBlock = false;
@@ -316,7 +310,8 @@ public class InputTurn : MonoBehaviour
             {
                 print("All checked");
                 actionLimit += 1;
-                timer = 3;
+                timer = actionLimit+2;
+                roundCount++;
 
                 playerOneTurn = 0;
                 playerOneMoves.Clear();
@@ -335,14 +330,31 @@ public class InputTurn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player1 = GameObject.FindWithTag("Player 1").GetComponent<Animator>();
+        player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
+        
         InputChecks();
         AttackChecks();
-
-        timeText.text = timer.ToString();
-
-        if (timer <= 0)
+        if (roundCount <= 3)
         {
-            timer = 0;
+            roundText.text = roundCount + "/3";
         }
+
+        if (roundCount == 4)
+        {
+            
+        }
+        timeText.text = timer.ToString();
     }
+
+    IEnumerator Timer()
+    {   
+        while (timer >= -1 && roundCount <=3)
+        {
+            yield return new WaitForSeconds(1.0f);
+            print("running");
+            timer -= 1;
+        }   
+    }
+    
 }

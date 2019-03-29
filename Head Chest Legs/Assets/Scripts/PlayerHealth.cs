@@ -20,6 +20,13 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    
         if (healthOne.transform.Find("Alien Health").gameObject.activeInHierarchy)
         {
             oneHealth = healthOne.transform.Find("Alien Health").transform.Find("Background").transform.Find("Mask")
@@ -40,26 +47,21 @@ public class PlayerHealth : MonoBehaviour
         
         if (healthTwo.transform.Find("Alien Health").gameObject.activeInHierarchy)
         {
-            oneHealth = healthOne.transform.Find("Alien Health").transform.Find("Background").transform.Find("Mask")
+            twoHealth = healthTwo.transform.Find("Alien Health").transform.Find("Background").transform.Find("Mask")
                 .transform.Find("Bar").gameObject.GetComponent<Image>();
         }
         
         if (healthTwo.transform.Find("Fighter Health").gameObject.activeInHierarchy)
         {
-            oneHealth = healthOne.transform.Find("Fighter Health").transform.Find("Background").transform.Find("Mask")
+            twoHealth = healthTwo.transform.Find("Fighter Health").transform.Find("Background").transform.Find("Mask")
                 .transform.Find("Bar").gameObject.GetComponent<Image>();
         }
         
         if (healthTwo.transform.Find("Skivvy Health").gameObject.activeInHierarchy)
         {
-            oneHealth = healthOne.transform.Find("Skivvy Health").transform.Find("Background").transform.Find("Mask")
+            twoHealth = healthTwo.transform.Find("Skivvy Health").transform.Find("Background").transform.Find("Mask")
                 .transform.Find("Bar").gameObject.GetComponent<Image>();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         /*oneHealth.fillAmount = oneHealthValue;
         twoHealth.fillAmount = twoHealthValue;*/
         
