@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 4237325964558927148, guid: 20182885f2ef81248be495ebaa0b4d74,
         type: 3}
       propertyPath: m_TagString
-      value: Player 2
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4237325964558927148, guid: 20182885f2ef81248be495ebaa0b4d74,
         type: 3}
@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 4237325964558927148, guid: 20182885f2ef81248be495ebaa0b4d74,
         type: 3}
       propertyPath: m_TagString
-      value: Player 2
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4237325964558927148, guid: 20182885f2ef81248be495ebaa0b4d74,
         type: 3}
@@ -2187,7 +2187,7 @@ PrefabInstance:
     - target: {fileID: 6007058078150317923, guid: 57d714da3a1334845968a5343852ecaf,
         type: 3}
       propertyPath: m_TagString
-      value: Player 2
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6007058078150317925, guid: 57d714da3a1334845968a5343852ecaf,
         type: 3}
@@ -2895,6 +2895,7 @@ GameObject:
   - component: {fileID: 1666841747}
   - component: {fileID: 1666841749}
   - component: {fileID: 1666841748}
+  - component: {fileID: 1666841750}
   m_Layer: 5
   m_Name: Game Over Panel
   m_TagString: Untagged
@@ -2961,6 +2962,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666841746}
   m_CullTransparentMesh: 0
+--- !u!114 &1666841750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666841746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c605769dccde44743a97e71735461ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788984304
 GameObject:
   m_ObjectHideFlags: 0

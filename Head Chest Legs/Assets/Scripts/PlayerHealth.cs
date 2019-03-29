@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         {
             oneHealth = healthOne.transform.Find("Alien Health").transform.Find("Background").transform.Find("Mask")
                 .transform.Find("Bar").gameObject.GetComponent<Image>();
+            Debug.Log("Found");
         }
 
         if (healthOne.transform.Find("Fighter Health").gameObject.activeInHierarchy)
