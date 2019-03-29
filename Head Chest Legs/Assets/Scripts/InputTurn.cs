@@ -25,6 +25,10 @@ public class InputTurn : MonoBehaviour
     public int timer = 5;
     public Text timeText;
 
+    public GameObject gameOverPanel;
+    public GameObject playerOneWin;
+    public GameObject playerTwoWin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -342,7 +346,27 @@ public class InputTurn : MonoBehaviour
 
         if (roundCount == 4)
         {
+            gameOverPanel.SetActive(true);
             
+            if (PlayerHealth.oneHealth.fillAmount > PlayerHealth.twoHealth.fillAmount)
+            {
+                playerOneWin.SetActive(true);
+            } else if (PlayerHealth.twoHealth.fillAmount > PlayerHealth.oneHealth.fillAmount)
+            {
+                playerTwoWin.SetActive(true);
+            }
+        }
+
+        if (PlayerHealth.oneHealth.fillAmount < 0.1f)
+        {
+            gameOverPanel.SetActive(true);
+            playerOneWin.SetActive(true);
+        }
+
+        if (PlayerHealth.twoHealth.fillAmount < 0.1f)
+        {
+            gameOverPanel.SetActive(true);
+            playerTwoWin.SetActive(true);
         }
         timeText.text = timer.ToString();
     }

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Image oneHealth;
-    public Image twoHealth;
+    public static Image oneHealth;
+    public static Image twoHealth;
     public GameObject healthOne;
     public GameObject healthTwo;
 
