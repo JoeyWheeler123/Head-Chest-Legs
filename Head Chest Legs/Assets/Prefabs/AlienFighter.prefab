@@ -941,6 +941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1990843429937993039}
+  - component: {fileID: 282884029013580321}
   m_Layer: 0
   m_Name: AlienFighter
   m_TagString: Untagged
@@ -963,6 +964,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282884029013580321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990843429937993038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921d8a0416473436085996d519ab7444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 0a2ffe89189d37042b4c34fedc47fe43, type: 3}
+  - {fileID: 8300000, guid: de8cf6ea8921cb840b5257dad968a54d, type: 3}
+  - {fileID: 8300000, guid: da0ae170c5b47484a93e27fdc062c5de, type: 3}
+  - {fileID: 8300000, guid: d57557ea8a272474082a17ba7a3eb551, type: 3}
+  - {fileID: 8300000, guid: 55bc07b2cd076db42bb2a16c7d8664f6, type: 3}
+  - {fileID: 8300000, guid: 235c391215a67e14ebda0a1ad60cb60e, type: 3}
+  - {fileID: 8300000, guid: be0e5d2817903d349afa26d47e9195c5, type: 3}
 --- !u!1 &1990843430189279566
 GameObject:
   m_ObjectHideFlags: 0

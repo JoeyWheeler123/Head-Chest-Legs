@@ -32,11 +32,20 @@ public class InputTurn : MonoBehaviour
     public Text moveInputOne;
     public Text moveInputTwo;
 
+    //Audio stuff
+    public AudioClip[] audioClips1;
+    public AudioClip[] audioClips2;
+
+    public AudioSource audio1;
+    public AudioSource audio2;
+
     // Start is called before the first frame update
     void Start()
     {
         playerOneMoves = new List<string>();
         playerTwoMoves = new List<string>();
+
+        //audio = gameObject.GetComponent<AudioSource>();
         
         StartCoroutine(Timer());
     }
@@ -51,6 +60,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Head Attack");
                 moveInputOne.text = playerOneMoves.Count.ToString();
+                audio1.clip = audioClips1[0];
+                audio1.Play();
             }
             else if (Input.GetButtonUp("Head Block"))
             {
@@ -58,7 +69,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Head Block");
                 moveInputOne.text = playerOneMoves.Count.ToString();
-
+                audio1.clip = audioClips1[6];
+                audio1.Play();
             }
             else if (Input.GetButtonUp("Chest Attack"))
             {
@@ -66,6 +78,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Chest Attack");
                 moveInputOne.text = playerOneMoves.Count.ToString();
+                audio1.clip = audioClips1[1];
+                audio1.Play();
 
             }
             else if (Input.GetButtonUp("Chest Block"))
@@ -74,6 +88,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Chest Block");
                 moveInputOne.text = playerOneMoves.Count.ToString();
+                audio1.clip = audioClips1[4];
+                audio1.Play();
 
             }
             else if (Input.GetButtonUp("Leg Attack"))
@@ -82,6 +98,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Attack");
                 moveInputOne.text = playerOneMoves.Count.ToString();
+                audio1.clip = audioClips1[2];
+                audio1.Play();
 
             }
             else if (Input.GetButtonUp("Leg Block"))
@@ -90,6 +108,8 @@ public class InputTurn : MonoBehaviour
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Block");
                 moveInputOne.text = playerOneMoves.Count.ToString();
+                audio1.clip = audioClips1[4];
+                audio1.Play();
             }
         }
 
@@ -101,6 +121,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Attack");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[0];
+                audio2.Play();
             }
             else if (Input.GetButtonUp("Head Block 2"))
             {
@@ -108,6 +130,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Block");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[6];
+                audio2.Play();
             }
             else if (Input.GetAxis("Chests 2") > 0.1f && !axisOnePressed)
             {
@@ -116,6 +140,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Attack");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[1];
+                audio2.Play();
             }
             else if (Input.GetAxis("Chests 2") < -0.1f && !axisOnePressed)
             {
@@ -124,6 +150,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Block");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[4];
+                audio2.Play();
             }
             else if (Input.GetAxis("Chests 2") < 0.1f && Input.GetAxis("Chests 2") > -0.1f)
             {
@@ -137,6 +165,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Leg Attack");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[2];
+                audio2.Play();
             }
             else if (Input.GetAxis("Legs 2") < -0.1f && !axisTwoPressed)
             {
@@ -145,6 +175,8 @@ public class InputTurn : MonoBehaviour
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Leg Block");
                 moveInputTwo.text = playerTwoMoves.Count.ToString();
+                audio2.clip = audioClips2[4];
+                audio2.Play();
             }
             else if (Input.GetAxis("Legs 2") < 0.1f && Input.GetAxis("Legs 2") > -0.1f)
             {
@@ -358,6 +390,9 @@ public class InputTurn : MonoBehaviour
     {
         player1 = GameObject.FindWithTag("Player 1").GetComponent<Animator>();
         player2 = GameObject.FindWithTag("Player 2").GetComponent<Animator>();
+
+        audioClips1 = player1.GetComponent<Sounds>().clips;
+        audioClips2 = player2.GetComponent<Sounds>().clips;
 
         if(player1 == null)
         {

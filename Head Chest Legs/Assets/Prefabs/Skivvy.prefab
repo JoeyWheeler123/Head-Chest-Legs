@@ -248,6 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237325964558927146}
   - component: {fileID: 4237325964558927147}
+  - component: {fileID: 2710314890737994352}
   m_Layer: 0
   m_Name: Skivvy
   m_TagString: Untagged
@@ -290,6 +291,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2710314890737994352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237325964558927148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921d8a0416473436085996d519ab7444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: d57512827e0e6c8468bb51dc09b493f2, type: 3}
+  - {fileID: 8300000, guid: 3b81babc05f9c964b952c137eec73837, type: 3}
+  - {fileID: 8300000, guid: 05b9e7d30dedcd146a3a8126b257d6ac, type: 3}
+  - {fileID: 8300000, guid: e3508a990caff0f439ea51ca7957ab93, type: 3}
+  - {fileID: 8300000, guid: 834fe2b9409c0cf44a251305269c2dca, type: 3}
+  - {fileID: 8300000, guid: 48f16901813b24940abf9b56c479b87a, type: 3}
+  - {fileID: 8300000, guid: 9b49eaee51da2a7478faeea6890bb41b, type: 3}
 --- !u!1 &4237325964601596297
 GameObject:
   m_ObjectHideFlags: 0

@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6007058078150317925}
   - component: {fileID: 6007058078150317922}
+  - component: {fileID: 2204885996185010808}
   m_Layer: 0
   m_Name: 'Scarab Fighter '
   m_TagString: Untagged
@@ -611,6 +612,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2204885996185010808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6007058078150317923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921d8a0416473436085996d519ab7444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 9911bd853920d7643b71c9709eb391d4, type: 3}
+  - {fileID: 8300000, guid: 714f6fa8ca897de4c8562268072712cf, type: 3}
+  - {fileID: 8300000, guid: bfcb56fda731b4c45b292ec13069707c, type: 3}
+  - {fileID: 8300000, guid: 740022cd147591842a26185ea24aac5f, type: 3}
+  - {fileID: 8300000, guid: 3d6f705bd1db1e7478d0a1063ab901f2, type: 3}
+  - {fileID: 8300000, guid: 9fdcf411a3af42d49b28159c19d9f8a1, type: 3}
+  - {fileID: 8300000, guid: ad4ac0a6868fc3841a3784ef72a6662c, type: 3}
 --- !u!1 &6007058078218341661
 GameObject:
   m_ObjectHideFlags: 0
