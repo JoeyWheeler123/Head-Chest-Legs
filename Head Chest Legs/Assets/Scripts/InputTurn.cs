@@ -29,12 +29,15 @@ public class InputTurn : MonoBehaviour
     public GameObject playerOneWin;
     public GameObject playerTwoWin;
 
+    public Text moveInputOne;
+    public Text moveInputTwo;
+
     // Start is called before the first frame update
     void Start()
     {
         playerOneMoves = new List<string>();
         playerTwoMoves = new List<string>();
-
+        
         StartCoroutine(Timer());
     }
 
@@ -47,36 +50,46 @@ public class InputTurn : MonoBehaviour
                 print("Head Attack");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Head Attack");
+                moveInputOne.text = playerOneMoves.Count.ToString();
             }
             else if (Input.GetButtonUp("Head Block"))
             {
                 print("Head Block");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Head Block");
+                moveInputOne.text = playerOneMoves.Count.ToString();
+
             }
             else if (Input.GetButtonUp("Chest Attack"))
             {
                 print("Chest Attack");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Chest Attack");
+                moveInputOne.text = playerOneMoves.Count.ToString();
+
             }
             else if (Input.GetButtonUp("Chest Block"))
             {
                 print("Chest Block");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Chest Block");
+                moveInputOne.text = playerOneMoves.Count.ToString();
+
             }
             else if (Input.GetButtonUp("Leg Attack"))
             {
                 print("Leg Attack");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Attack");
+                moveInputOne.text = playerOneMoves.Count.ToString();
+
             }
             else if (Input.GetButtonUp("Leg Block"))
             {
                 print("Leg Block");
                 playerOneTurn += 1;
                 playerOneMoves.Add("Leg Block");
+                moveInputOne.text = playerOneMoves.Count.ToString();
             }
         }
 
@@ -87,12 +100,14 @@ public class InputTurn : MonoBehaviour
                 print("Head Attack 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Attack");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetButtonUp("Head Block 2"))
             {
                 print("Head Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Head Block");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetAxis("Chests 2") > 0.1f && !axisOnePressed)
             {
@@ -100,6 +115,7 @@ public class InputTurn : MonoBehaviour
                 print("Chest Attack 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Attack");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetAxis("Chests 2") < -0.1f && !axisOnePressed)
             {
@@ -107,6 +123,7 @@ public class InputTurn : MonoBehaviour
                 print("Chest Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Chest Block");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetAxis("Chests 2") < 0.1f && Input.GetAxis("Chests 2") > -0.1f)
             {
@@ -119,6 +136,7 @@ public class InputTurn : MonoBehaviour
                 print("Leg Attack 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Leg Attack");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetAxis("Legs 2") < -0.1f && !axisTwoPressed)
             {
@@ -126,6 +144,7 @@ public class InputTurn : MonoBehaviour
                 print("Leg Block 2");
                 playerTwoTurn += 1;
                 playerTwoMoves.Add("Leg Block");
+                moveInputTwo.text = playerTwoMoves.Count.ToString();
             }
             else if (Input.GetAxis("Legs 2") < 0.1f && Input.GetAxis("Legs 2") > -0.1f)
             {
@@ -327,6 +346,9 @@ public class InputTurn : MonoBehaviour
 
                 player1.SetBool("Idle", true);
                 player2.SetBool("Idle", true);
+
+                moveInputOne.text = "";
+                moveInputTwo.text = "";
             }
         }
     }
@@ -369,14 +391,22 @@ public class InputTurn : MonoBehaviour
 
         if (PlayerHealth.oneHealth.fillAmount < 0.1f)
         {
-            gameOverPanel.SetActive(true);
-            playerOneWin.SetActive(true);
+            if (!playerTwoWin.activeInHierarchy)
+            {
+                gameOverPanel.SetActive(true);
+                playerOneWin.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
 
         if (PlayerHealth.twoHealth.fillAmount < 0.1f)
         {
-            gameOverPanel.SetActive(true);
-            playerTwoWin.SetActive(true);
+            if (!playerOneWin.activeInHierarchy)
+            {
+                gameOverPanel.SetActive(true);
+                playerTwoWin.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
         timeText.text = timer.ToString();
     }

@@ -17,6 +17,7 @@ public class Reset : MonoBehaviour
         if(Input.GetButtonUp("Leg Block"))
         {
             Restart();
+            Time.timeScale = 1;
         }
     }
 
